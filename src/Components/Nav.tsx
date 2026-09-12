@@ -1,30 +1,94 @@
-import React from 'react';
-import Logo from "../assets/logo-text.png"
-import { RxHamburgerMenu } from 'react-icons/rx';
+
+import Logo from "../assets/logo-text.png";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
     return (
-        <nav className='border-b py-3' >
-            <div className='grid grid-cols-3 items-center max-w-7xl mx-auto px-4 py-3' >
-                <img src={Logo} alt="" className='w-28 justify-self-center' />
+        <header className="border-b border-base-200">
+            <nav className="max-w-7xl mx-auto px-4 py-4">
 
-                <ul className='hidden md:flex items-center gap-4' >
-                    <li>Home</li>
-                    <li>Technologies</li>
-                    <li>Projects</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
+                <div className="grid grid-cols-3 items-center">
 
-                <div className='hidden md:flex items-center gap-2 justify-self-end' >
-                    <button className="btn btn-soft">Sign In</button>
-                    <button className="btn btn-secondary">Sign Up</button>
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden justify-self-start text-2xl"
+                        aria-label="Open menu"
+                    >
+                        <RxHamburgerMenu />
+                    </button>
+
+                    {/* Logo */}
+                    <a href="/" className="justify-self-center md:justify-self-start">
+                        <img
+                            src={Logo}
+                            alt="DevStack Logo"
+                            className="w-28"
+                        />
+                    </a>
+
+                    {/* Navigation Links */}
+                    <ul className="hidden md:flex items-center justify-center gap-6 text-sm font-medium">
+                        <li>
+                            <a
+                                href="#"
+                                className="hover:text-primary transition-colors"
+                            >
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                className="hover:text-primary transition-colors"
+                            >
+                                Technologies
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                className="hover:text-primary transition-colors"
+                            >
+                                Projects
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                className="hover:text-primary transition-colors"
+                            >
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="#"
+                                className="hover:text-primary transition-colors"
+                            >
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+
+                    {/* Authentication Buttons */}
+                    <div className="hidden md:flex items-center gap-2 justify-self-end">
+                        <button className="btn btn-soft">
+                            Sign In
+                        </button>
+
+                        <button className="btn btn-secondary">
+                            Sign Up
+                        </button>
+                    </div>
+
                 </div>
 
-                <button className='md:hidden justify-self-start text-2xl'><RxHamburgerMenu /></button>
-            </div>
-
-        </nav>
+            </nav>
+        </header>
     );
 };
 
