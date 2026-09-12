@@ -5,10 +5,18 @@ import type { ITechnology } from "./types/technologies";
 
 interface TechnologyCardProps {
   technology: ITechnology;
+  onAddToStack: (technology: ITechnology) => void;
+  selectedTechnologies : ITechnology[];
 }
 
-const TechnologyCard = ({ technology }: TechnologyCardProps) => {
+const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: TechnologyCardProps) => {
+
+  const isAdded = selectedTechnologies.some((item)=> item.id === technology.id);
+
   return (
+
+    
+
     <div className="group card bg-base-100 border border-base-200 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
       
       <div className="card-body p-6">
@@ -82,10 +90,13 @@ const TechnologyCard = ({ technology }: TechnologyCardProps) => {
 
         {/* Button */}
         <button
+        onClick={() => onAddToStack(technology)}
+        disabled={isAdded}
           className="btn w-full border-0 text-white bg-linear-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300"
         >
-          Add to Stack
+          {isAdded ? "Added to stack" : "Add to Stack"}
         </button>
+
 
       </div>
 

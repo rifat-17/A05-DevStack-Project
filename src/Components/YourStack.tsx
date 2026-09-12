@@ -23,7 +23,7 @@ const YourStack = ({ selectedTechnologies }: YourStackProps) => {
 
                     <p className="text-sm text-base-content/60">
                         {selectedTechnologies.length}{" "}
-                        {selectedTechnologies.length===1 ? "Technology" : "Technologies"}{" "} 
+                        {selectedTechnologies.length === 1 ? "Technology" : "Technologies"}{" "}
                         Selected
                     </p>
 
@@ -35,7 +35,13 @@ const YourStack = ({ selectedTechnologies }: YourStackProps) => {
                         Your stack is empty.
                     </p>
                 )}
-
+                <div>
+                    {selectedTechnologies.map((technology) => (
+                        <div key={technology.id}>
+                            {technology.name}
+                        </div>
+                    ))}
+                </div>
             </div>
 
         </div>
