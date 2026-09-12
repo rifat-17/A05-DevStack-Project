@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { ITechnology } from './types/technologies';
 import TechnologyCard from './TechnologyCard';
 
