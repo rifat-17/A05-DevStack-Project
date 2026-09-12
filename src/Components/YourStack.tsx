@@ -1,11 +1,14 @@
 import React from 'react';
 import type { ITechnology } from './types/technologies';
+import StackItem from './StackItem';
 
 interface YourStackProps {
     selectedTechnologies: ITechnology[];
+    onRemove: (id: string) => void;
+    onRemoveAll: () => void;
 }
 
-const YourStack = ({ selectedTechnologies }: YourStackProps) => {
+const YourStack = ({ selectedTechnologies, onRemove, onRemoveAll }: YourStackProps) => {
 
 
 
@@ -35,13 +38,28 @@ const YourStack = ({ selectedTechnologies }: YourStackProps) => {
                         Your stack is empty.
                     </p>
                 )}
-                <div>
+                {/* Stack Items */}
+                <div className="space-y-3">
+
                     {selectedTechnologies.map((technology) => (
-                        <div key={technology.id}>
-                            {technology.name}
-                        </div>
+                        <StackItem
+                            key={technology.id}
+                            technology={technology}
+                            onRemove={onRemove}
+                        />
                     ))}
+
                 </div>
+
+                {/* Remove All */}
+                {selectedTechnologies.length > 0 && (
+                    <button
+                        onClick={onRemoveAll}
+                        className="btn btn-sm btn-outline btn-error w-full mt-4"
+                    >
+                        Remove All
+                    </button>
+                )}
             </div>
 
         </div>

@@ -63,10 +63,7 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
           <span className="badge badge-outline">
             {technology.difficulty}
           </span>
-
-        </div>
-
-        {/* Rating */}
+          {/* Rating */}
         <div className="flex items-center gap-2 mt-4">
 
           <div className="flex items-center gap-1 text-warning">
@@ -78,12 +75,11 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
             </span>
 
           </div>
-
-          <span className="text-sm text-base-content/50">
-            Excellent
-          </span>
+        </div>
 
         </div>
+
+        
 
         {/* Divider */}
         <div className="divider my-2"></div>
