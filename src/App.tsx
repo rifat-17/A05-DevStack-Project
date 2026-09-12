@@ -6,6 +6,7 @@ import Nav from "./Components/Nav"
 import TechnologyCard from "./Components/TechnologyCard";
 import TechnologySection from "./Components/TechnologySection";
 import type { ITechnology } from "./Components/types/technologies";
+import YourStack from "./Components/YourStack";
 
 
 const dataFetch = async (): Promise<ITechnology[]> => {
@@ -23,11 +24,16 @@ function App() {
     });
   }, []);
 
+  const [selectedTechnologies, setselectedTechnologies] = useState<ITechnology[]>([]);
+
+
   return (
     <>
       <Nav />
       <HeroBanner />
       <TechnologySection technologies={technologies} />
+      
+      <YourStack selectedTechnologies={[]} />
     </>
   )
 }
