@@ -10,13 +10,14 @@ Users can browse technologies, view useful information such as ratings and diffi
 The project focuses on practicing modern React concepts, TypeScript, component-based architecture, state management, responsive UI, and working with JSON data.
 
 Technologies Used:
-React
-TypeScript
-Tailwind CSS
-DaisyUi
-React Toastify
-React Icons
-JSON for technology data
+
+React,
+TypeScript,
+Tailwind CSS,
+DaisyUi,
+React Toastify,
+React Icons,
+JSON for technology data,
 Vite
 
 
