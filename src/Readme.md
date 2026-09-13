@@ -19,6 +19,7 @@ Vite
 
 
 🌟 Features
+
 1. 🔍 Explore Technologies
 
 Browse a collection of technologies with useful information including:
@@ -30,25 +31,29 @@ Difficulty level
 Rating
 Technology icon
 Badge
+
+
 2. 🧩 Build Your Own Stack
 
 Add technologies to your personal Your Stack section.
 
-Add technologies with one click
-Prevent duplicate technologies
-Remove individual technologies
-Remove all technologies at once
+Add technologies with one click,
+Prevent duplicate technologies,
+Remove individual technologies,
+Remove all technologies at once,
 See the number of selected technologies
+
+
 3. 🔔 Interactive User Feedback
 
 The application uses React Toastify to provide instant feedback when users interact with their stack.
 
 Users receive notifications when:
 
-A technology is successfully added
-A duplicate technology is added
-A technology is removed
-All technologies are removed
+A technology is successfully added,
+A duplicate technology is added,
+A technology is removed,
+All technologies are removed,
 
 
 Question and Answer :
