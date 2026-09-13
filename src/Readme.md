@@ -1,5 +1,7 @@
 Project Name : Dev Stack 
+
 Description: A modern developer technology stack builder where you can explore popular technologies, learn about their categories and difficulty levels, and create your own personalized technology stack.
+
 
 DevStack is a responsive React + TypeScript web application designed for developers who want to explore different technologies and build their own personalized stack.
 
