@@ -27,13 +27,13 @@ Vite
 
 Browse a collection of technologies with useful information including:
 
-Technology name
-Description
-Category
-Difficulty level
-Rating
-Technology icon
-Badge
+Technology name,
+Description,
+Category,
+Difficulty level,
+Rating,
+Technology icon,
+Badge,
 
 
 2. 🧩 Build Your Own Stack
