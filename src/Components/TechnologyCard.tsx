@@ -25,7 +25,7 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
         <div className="flex items-start justify-between">
 
           {/* Technology Icon */}
-          <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-linear-to-br from-cyan-400 to-blue-600 text-white shadow-md">
+          <div className="w-14 h-14 flex items-center justify-center rounded-xl  text-white shadow-md">
             <img
               src={technology.icon}
               alt={technology.name}
@@ -34,7 +34,7 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
           </div>
 
           {/* Badge */}
-          <span className="badge badge-secondary font-medium px-3 py-3">
+          <span className="badge badge-soft font-medium px-3 py-3">
             {technology.badge}
           </span>
 
@@ -54,7 +54,7 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap items-center gap-2 mt-4">
+        <div className="flex flex-wrap items-center gap-3 mt-4">
 
           <span className="badge badge-outline">
             {technology.category}
@@ -88,7 +88,7 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
         <button
         onClick={() => onAddToStack(technology)}
         disabled={isAdded}
-          className="btn w-full border-0 text-white bg-linear-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300"
+          className="btn w-full border-0 text-white bg-black hover:bg-gray-800 transition-all duration-300"
         >
           {isAdded ? "Added to stack" : "Add to Stack"}
         </button>
