@@ -56,11 +56,11 @@ const TechnologyCard = ({ technology, onAddToStack , selectedTechnologies }: Tec
         {/* Tags */}
         <div className="flex flex-wrap items-center gap-3 mt-4">
 
-          <span className="badge badge-outline">
+          <span className="badge badge-neutral backdrop-grayscale-200">
             {technology.category}
           </span>
 
-          <span className="badge badge-outline">
+          <span className="badge badge-outline backdrop-grayscale-200">
             {technology.difficulty}
           </span>
           {/* Rating */}
