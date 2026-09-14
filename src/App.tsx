@@ -98,27 +98,42 @@ function App() {
             <span className="loading loading-spinner loading-lg"></span>
           </div>
         ) : (
-          // Main Content
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          <div className="space-y-8">
+            {/* section heading */}
+            <div>
+              <h1 className="text-5xl font-bold mb-6">
+                Explore the{" "}
+                <span className="font-bold bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+                  Technologies
+                </span>
+              </h1>
 
-            {/* Technology Cards */}
-            <section className="lg:col-span-3">
-              <TechnologySection
-                technologies={technologies}
-                onAddToStack={handleAddToStack}
-                selectedTechnologies={selectedTechnologies}
-              />
-            </section>
+              <p className="text-base-content/60">
+                Pick one technology per category to build your ideal stack.
+              </p>
+            </div>
 
-            {/* Your Stack */}
-            <aside className="lg:col-span-1">
-              <YourStack
-                selectedTechnologies={selectedTechnologies}
-                onRemove={handleRemoveFromStack}
-                onRemoveAll={handleRemoveAll}
-              />
-            </aside>
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+              {/* Technology Cards */}
+              <section className="lg:col-span-3">
+                <TechnologySection
+                  technologies={technologies}
+                  onAddToStack={handleAddToStack}
+                  selectedTechnologies={selectedTechnologies}
+                />
+              </section>
 
+              {/* Your Stack */}
+              <aside className="lg:col-span-1">
+                <div className="sticky top-6">
+                  <YourStack
+                    selectedTechnologies={selectedTechnologies}
+                    onRemove={handleRemoveFromStack}
+                    onRemoveAll={handleRemoveAll}
+                  />
+                </div>
+              </aside>
+            </div>
           </div>
         )}
 

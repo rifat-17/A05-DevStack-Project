@@ -4,8 +4,8 @@ import { RxHamburgerMenu } from "react-icons/rx";
 
 const Nav = () => {
     return (
-        <header className="border-b border-base-200">
-            <nav className="max-w-7xl mx-auto px-4 py-4">
+        <header className="border-b border-base-200 sticky top-0 z-50 bg-base-100">
+            <nav className="max-w-7xl mx-auto px-4 py-4 ">
 
                 <div className="grid grid-cols-3 items-center">
 
